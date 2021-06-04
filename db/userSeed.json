@@ -1,0 +1,20 @@
+[
+    {
+        "username": "kingbetes",
+        "name": "Max Walker",
+        "password": "JediBoss1",
+        "profilePhoto": "https://pbs.twimg.com/profile_images/1264940891053187072/Du3PRip4_400x400.jpg",
+        "dob": "07/08/1993",
+        "location": "Greater NYC Area",
+        "connection": "Type 1 Diabetic"
+    },
+    {
+        "username": "mcreyes19",
+        "name": "Mia Reyes",
+        "password": "Jedi1234",
+        "profilePhoto": "https://media-exp3.licdn.com/dms/image/C4E03AQGfVT3AmgKTVg/profile-displayphoto-shrink_200_200/0/1590881780519?e=1628121600&v=beta&t=vYXQMHXdPlOz6eNT05zYitw_N32n0LHtJpwokvlDTFo",
+        "dob": "01/27/2000",
+        "location": "Tri-State Area",
+        "connection": "Sister to a Type 1 diabetic"
+    }
+]
