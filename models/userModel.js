@@ -23,6 +23,10 @@ const UserSchema = new mongoose.Schema(
             type: String,
             requried: true
         },
+        aboutMe: {
+            type: String,
+            requried: true
+        },
         posts: [String],
         bookmarks: [String],
     }, {timestamp: true}
