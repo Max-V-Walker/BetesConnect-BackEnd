@@ -1,21 +1,22 @@
-const mongoose = require('../db/connection');
+// const mongoose = require('../db/connection');
+const mongoose = require('mongoose')
 
 const PostSchema = new mongoose.Schema(
     {
         headline: {
             type: String,
-            requried: true
+            required: true
         },
         content: {
             type: String,
-            requried: true
+            required: true
         },
-        author: {
-            type: String,
-            required: true,
-          },
         likes: [String],
         bookmarks: [String],
+        author: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        },
         thread: [{}]
     }, {timestamp: true}
 );
