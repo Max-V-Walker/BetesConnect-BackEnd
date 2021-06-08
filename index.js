@@ -5,7 +5,6 @@ const methodOverride = require("method-override");
 const userRouter = require("./controllers/userRouter");
 const postRouter = require("./controllers/postRouter");
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
