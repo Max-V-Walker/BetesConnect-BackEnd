@@ -1,5 +1,4 @@
-// const mongoose = require('../db/connection');
-const mongoose = require('mongoose')
+const mongoose = require('../db/connection');
 
 const PostSchema = new mongoose.Schema(
     {
