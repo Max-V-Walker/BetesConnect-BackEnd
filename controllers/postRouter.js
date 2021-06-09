@@ -4,14 +4,12 @@ const Post = require("../models/PostModel");
 const User = require("../models/UserModel");
 
 // Create: Create new Post
-router.post("/", async (req, res, next) => {
+router.post("/", async (req, res) => {
 const user = await User.findById(req.body.author)
   req.body.author = user
 
-  Post.create(req.body)
-  .then(createResponse => Post.find({}))
-  .then(posts => res.json(posts))
-  .catch(next);
+  const newPost = await Post.create(req.body)
+  res.json(newPost)
 });
 
 // Index: Get all Posts
