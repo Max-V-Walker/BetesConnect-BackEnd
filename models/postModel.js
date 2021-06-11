@@ -10,13 +10,13 @@ const PostSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        likes: [String],
-        bookmarks: [String],
         author: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
-        thread: [{}]
+        likes: [],
+        bookmarks: [{}],
+        thread: [],
     }, {timestamp: true}
 );
     
