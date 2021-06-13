@@ -10,13 +10,18 @@ const PostSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        likes: [String],
-        bookmarks: [String],
         author: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
-        thread: [{}]
+        likes: [String],
+        bookmarks: [{}],
+        comments: [{
+            body: {type: String},
+            commentor: {type: String},
+            likes: [String],
+        }],
+        commentThread: [{}],
     }, {timestamp: true}
 );
     

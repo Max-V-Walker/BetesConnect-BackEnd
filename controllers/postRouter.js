@@ -31,10 +31,9 @@ router.put("/:id", (req, res) => {
 });
 
 // Delete: Delete Post
-router.delete("/:id", (req, res) => {
-  Post.findOneAndDelete({ _id: req.params.id })
-  .then(deleteResponse => Post.find({}))
-  .then(posts => res.json(posts))
+router.delete("/:id", async (req, res) => {
+  const deletePost = await Post.findOneAndDelete({ _id: req.params.id })
+  res.json(deletePost)
 });
 
 module.exports = router;
