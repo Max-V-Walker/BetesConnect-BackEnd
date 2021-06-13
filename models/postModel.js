@@ -14,9 +14,14 @@ const PostSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         },
-        likes: [],
+        likes: [String],
         bookmarks: [{}],
-        thread: [],
+        comments: [{
+            body: {type: String},
+            commentor: {type: String},
+            likes: [String],
+        }],
+        commentThread: [{}],
     }, {timestamp: true}
 );
     
